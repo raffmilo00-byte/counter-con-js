@@ -51,8 +51,3 @@ Il progetto è pensato per esercitarsi con:
 
 *(<img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/a4623bc7-46e2-4d38-8458-627898663413" />
 )*  
-Per aggiungerlo:
-
-```md
-![Preview](<img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/614a7cfa-74a1-4072-94e3-d8d30cfb2fa5" />
-)
