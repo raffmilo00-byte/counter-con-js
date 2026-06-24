@@ -1,111 +1,58 @@
-Counter App — JavaScript Project
-https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=white
-https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=white
-https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=white
-https://img.shields.io/badge/Version-1.0-000000?style=for-the-badge
-https://img.shields.io/badge/License-MIT-000000?style=for-the-badge
+# Counter App — JavaScript Project
 
-https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white
-https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white
-https://img.shields.io/badge/Made_by-Raff-000000?style=for-the-badge
+![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=white)
+![Status](https://img.shields.io/badge/Version-1.0-000000?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)
 
-Live Demo
-https://raffmilo00-byte.github.io/counter-con-js/
+![Netlify](https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white)
+![Made by Raff](https://img.shields.io/badge/Made_by-Raff-000000?style=for-the-badge)
 
-Descrizione del progetto
-Questo progetto è una semplice applicazione di conteggio sviluppata in JavaScript senza l’utilizzo di framework.
-L’interfaccia viene generata dinamicamente tramite manipolazione del DOM e include un sistema di incremento/decremento, un design moderno basato su CSS avanzato e un selettore di tema chiaro/scuro.
+---
 
-L’obiettivo è esercitarsi con:
+## Live Demo
 
-gestione degli eventi
+ **https://raffmilo00-byte.github.io/counter-con-js/**
 
-funzioni modulari
+---
 
-creazione dinamica degli elementi
+##  Descrizione del progetto
 
-utilizzo di variabili CSS
+Una **Counter App moderna** sviluppata in JavaScript puro, con interfaccia generata dinamicamente tramite DOM, design professionale e supporto al **tema Dark/Light**.  
+Il progetto è pensato per esercitarsi con:
 
-animazioni e transizioni
+- manipolazione del DOM  
+- funzioni modulari  
+- gestione degli eventi  
+- UI dinamica  
+- CSS avanzato (gradienti, blur, animazioni)
 
-organizzazione del codice
+È un ottimo esempio di come creare una piccola applicazione web **senza framework**, mantenendo comunque un design moderno e pulito.
 
-Funzionalità principali
-Incremento e decremento del valore
+---
 
-Interfaccia generata interamente via JavaScript
+##  Funzionalità
 
-Tema chiaro/scuro attivabile tramite pulsante
+- Incremento e decremento del valore
+- Interfaccia generata interamente via JavaScript
+- Design moderno con:
+  - sfondo gradiente
+  - effetto glass-card
+  - animazioni sui pulsanti
+  - Google Font “Poppins”
+- Tema **Dark/Light** attivabile con un pulsante
+- Codice pulito e modulare
 
-Stile moderno con gradienti, effetto glass e animazioni
+---
 
-Font personalizzato tramite Google Fonts
+##  Anteprima
 
-Codice strutturato in funzioni per una migliore leggibilità
-
-Anteprima
-(Inserire qui uno screenshot del progetto)
-
+*(<img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/a4623bc7-46e2-4d38-8458-627898663413" />
+)*  
 Per aggiungerlo:
 
-Effettuare uno screenshot
-
-Caricarlo nel repository
-
-Copiare il link generato
-
-Inserirlo nel README con la sintassi:
-
-Codice
-![Preview](URL_DELL_IMMAGINE)
-Struttura del progetto
-Codice
-/project-folder
-│── index.html
-│── script.js
-│── style.css
-└── README.md
-Dettagli tecnici
-Creazione dell’interfaccia
-La UI viene generata tramite una funzione dedicata che crea e restituisce gli elementi principali:
-
-js
-createCounterUI()
-Logica del counter
-La gestione degli eventi è separata dalla creazione dell’interfaccia:
-
-js
-setupCounterLogic(ui)
-Tema chiaro/scuro
-Il tema viene alternato tramite l’aggiunta/rimozione della classe:
-
-js
-document.body.classList.toggle("dark")
-Tecnologie utilizzate
-HTML5
-
-CSS3 (gradienti, blur, animazioni, variabili CSS)
-
-JavaScript (DOM, funzioni modulari)
-
-Google Fonts
-
-GitHub Pages per il deploy
-
-Deploy su Netlify (opzionale)
-Per pubblicare il progetto su Netlify:
-
-Accedere a https://netlify.com
-
-Selezionare “Add new site” → “Deploy manually”
-
-Trascinare la cartella del progetto
-
-Attendere la generazione del link pubblico
-
-Autore
-Raffaele Milo
-Progetto realizzato per esercitazione e approfondimento delle basi di JavaScript e del DOM.
-
-Note
-Se il progetto risulta utile o interessante, è possibile lasciare una stella al repository.
+```md
+![Preview](<img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/614a7cfa-74a1-4072-94e3-d8d30cfb2fa5" />
+)
