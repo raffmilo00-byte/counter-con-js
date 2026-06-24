@@ -1,4 +1,4 @@
-// js/script.js
+
 
 const STORAGE_KEY = 'counterValue';
 let counterValue = Number(localStorage.getItem(STORAGE_KEY)) || 0;
