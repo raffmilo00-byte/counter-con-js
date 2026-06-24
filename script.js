@@ -1,78 +1,93 @@
-// -----------------------------
-// Valore iniziale del counter
-// -----------------------------
-let counter = 0;
+// js/script.js
 
-// -----------------------------
-// Creazione dell'interfaccia
-// -----------------------------
+const STORAGE_KEY = 'counterValue';
+let counterValue = Number(localStorage.getItem(STORAGE_KEY)) || 0;
+
+// Crea l'interfaccia dinamicamente e restituisce i riferimenti utili
 function createCounterUI() {
-    // 1. Creazione degli elementi
-    const container = document.createElement("div");
-    const display = document.createElement("p");
-    const btnPlus = document.createElement("button");
-    const btnMinus = document.createElement("button");
+  const container = document.createElement('section');
+  container.className = 'counter-container';
 
-    // 2. Configurazione degli elementi
-    container.classList.add("counter-container");
+  const display = document.createElement('div');
+  display.className = 'counter-display';
+  display.setAttribute('role', 'status');
+  display.setAttribute('aria-live', 'polite');
+  display.id = 'counterDisplay';
 
-    display.textContent = counter;
-    display.classList.add("counter-display");
+  const controls = document.createElement('div');
+  controls.className = 'counter-controls';
 
-    btnPlus.textContent = "+";
-    btnPlus.classList.add("btn-plus");
+  const btnMinus = document.createElement('button');
+  btnMinus.className = 'btn btn-minus';
+  btnMinus.type = 'button';
+  btnMinus.setAttribute('aria-label', 'Decrementa');
+  btnMinus.textContent = '−';
 
-    btnMinus.textContent = "-";
-    btnMinus.classList.add("btn-minus");
+  const btnPlus = document.createElement('button');
+  btnPlus.className = 'btn btn-plus';
+  btnPlus.type = 'button';
+  btnPlus.setAttribute('aria-label', 'Incrementa');
+  btnPlus.textContent = '+';
 
-    // 3. Restituzione dell’oggetto
-    return {
-        container,
-        display,
-        btnPlus,
-        btnMinus
-    };
+  const themeToggle = document.createElement('button');
+  themeToggle.className = 'btn btn-theme';
+  themeToggle.type = 'button';
+  themeToggle.setAttribute('aria-label', 'Cambia tema');
+  themeToggle.textContent = 'Cambia tema';
+
+  controls.appendChild(btnMinus);
+  controls.appendChild(btnPlus);
+
+  container.appendChild(display);
+  container.appendChild(controls);
+  container.appendChild(themeToggle);
+
+  return { container, display, btnPlus, btnMinus, themeToggle };
 }
 
-// -----------------------------
-// Logica del counter
-// -----------------------------
+// Aggiorna il display e salva su localStorage
+function updateDisplay(display, value) {
+  display.textContent = value;
+  localStorage.setItem(STORAGE_KEY, String(value));
+}
+
+// Logica del counter separata dalla creazione UI
 function setupCounterLogic(ui) {
-    ui.btnPlus.addEventListener("click", () => {
-        counter++;
-        ui.display.textContent = counter;
-    });
+  const { display, btnPlus, btnMinus, themeToggle } = ui;
 
-    ui.btnMinus.addEventListener("click", () => {
-        counter--;
-        ui.display.textContent = counter;
-    });
+  btnPlus.addEventListener('click', () => {
+    counterValue += 1;
+    updateDisplay(display, counterValue);
+  });
+
+  btnMinus.addEventListener('click', () => {
+    counterValue -= 1;
+    updateDisplay(display, counterValue);
+  });
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+
+  // Supporto per tasti tastiera: + e -
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '+' || e.key === '=') {
+      counterValue += 1;
+      updateDisplay(display, counterValue);
+    } else if (e.key === '-') {
+      counterValue -= 1;
+      updateDisplay(display, counterValue);
+    }
+  });
 }
 
-// -----------------------------
-// Montaggio dell'interfaccia
-// -----------------------------
-const ui = createCounterUI();
+// Inizializzazione
+function init() {
+  const app = document.getElementById('app');
+  const ui = createCounterUI();
+  app.appendChild(ui.container);
+  updateDisplay(ui.display, counterValue);
+  setupCounterLogic(ui);
+}
 
-// Aggiungo il container al DOM
-document.body.appendChild(ui.container);
-
-// Inserisco gli elementi dentro il container
-ui.container.appendChild(ui.display);
-ui.container.appendChild(ui.btnPlus);
-ui.container.appendChild(ui.btnMinus);
-
-// Attivo la logica del counter
-setupCounterLogic(ui);
-
-// -----------------------------
-// Pulsante toggle tema
-// -----------------------------
-const themeBtn = document.createElement("button");
-themeBtn.textContent = "cambia tema";
-themeBtn.classList.add("theme-toggle");
-ui.container.appendChild(themeBtn);
-
-themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-});
+document.addEventListener('DOMContentLoaded', init);
