@@ -7,4 +7,4 @@
 ![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)
 
 ![Netlify](https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white)
