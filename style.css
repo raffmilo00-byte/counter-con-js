@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg: linear-gradient(135deg, #6a11cb, #2575fc);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text: #222;
+    --plus: #4CAF50;
+    --minus: #f44336;
+}
+
+.dark {
+    --bg: linear-gradient(135deg, #0f0f0f, #2c2c2c);
+    --card-bg: rgba(40, 40, 40, 0.9);
+    --text: #f5f5f5;
+    --plus: #6bd66b;
+    --minus: #ff6b6b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.4s ease;
+}
+
+.counter-container {
+    background-color: var(--card-bg);
+    padding: 35px 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.counter-display {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    transition: color 0.4s ease;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-plus {
+    background-color: var(--plus);
+    color: white;
+}
+
+.btn-plus:hover {
+    transform: scale(1.12) rotate(3deg);
+    filter: brightness(1.1);
+}
+
+.btn-minus {
+    background-color: var(--minus);
+    color: white;
+}
+
+.btn-minus:hover {
+    transform: scale(1.12) rotate(-3deg);
+    filter: brightness(1.1);
+}
+
+.theme-toggle {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffffaa;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #ffffffdd;
+    transform: scale(1.05);
+}
