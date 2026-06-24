@@ -3,51 +3,62 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=white)
-![Status](https://img.shields.io/badge/Version-1.0-000000?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.0-000000?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)
-
-![Netlify](https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white)
-![Made by Raff](https://img.shields.io/badge/Made_by-Raff-000000?style=for-the-badge)
 
 ---
 
 ## Live Demo
 
- **https://raffmilo00-byte.github.io/counter-con-js/**
+https://raffmilo00-byte.github.io/counter-con-js/
 
 ---
 
-##  Descrizione del progetto
+## Descrizione
 
-Una **Counter App moderna** sviluppata in JavaScript puro, con interfaccia generata dinamicamente tramite DOM, design professionale e supporto al **tema Dark/Light**.  
-Il progetto è pensato per esercitarsi con:
-
-- manipolazione del DOM  
-- funzioni modulari  
-- gestione degli eventi  
-- UI dinamica  
-- CSS avanzato (gradienti, blur, animazioni)
-
-È un ottimo esempio di come creare una piccola applicazione web **senza framework**, mantenendo comunque un design moderno e pulito.
+Applicazione di conteggio sviluppata in JavaScript puro. L'interfaccia (display e pulsanti) è generata dinamicamente tramite DOM. Include incremento/decremento del valore, toggle tema chiaro/scuro e persistenza del valore tramite `localStorage`.
 
 ---
 
-##  Funzionalità
+## Requisiti soddisfatti
 
-- Incremento e decremento del valore
-- Interfaccia generata interamente via JavaScript
-- Design moderno con:
-  - sfondo gradiente
-  - effetto glass-card
-  - animazioni sui pulsanti
-  - Google Font “Poppins”
-- Tema **Dark/Light** attivabile con un pulsante
-- Codice pulito e modulare
+- JavaScript puro, senza framework
+- Interfaccia creata dinamicamente con `document.createElement`
+- Pulsanti `+` e `-` funzionanti e aggiornamento del display via JS
+- Codice suddiviso in funzioni (`createCounterUI`, `setupCounterLogic`, `updateDisplay`)
+- Struttura dei file separata in `index.html`, `js/`, `css/`
+- README con link alla demo
 
 ---
 
-##  Anteprima
+## Struttura del progetto
 
-*(<img width="950" height="502" alt="image" src="https://github.com/user-attachments/assets/a4623bc7-46e2-4d38-8458-627898663413" />
-)*  
+/counter-con-js
+│── index.html
+│── js/script.js
+│── css/style.css
+
+---
+
+## Come eseguire
+
+1. Aprire `index.html` in un browser moderno oppure usare la Live Demo.
+2. I pulsanti `+` e `-` aggiornano il valore; il valore è salvato automaticamente in `localStorage`.
+
+---
+
+## Note su accessibilità e qualità del codice
+
+- Display con `role="status"` e `aria-live="polite"` per aggiornamenti letti dagli screen reader.
+- Pulsanti `<button>` con `aria-label`.
+- Funzioni modulari per separare UI e logica.
+- Testato su Chrome e Firefox.
+
+---
+
+## Autore
+
+Raffaele Milo
+![Preview](<img width="615" height="288" alt="image" src="https://github.com/user-attachments/assets/922d2547-8b00-4b51-85fb-47bd0f06e1d1" />
+)
+
