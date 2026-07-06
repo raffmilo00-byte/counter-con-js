@@ -85,7 +85,8 @@ body {
 /* Pulsante tema */
 .theme-toggle {
     margin-top: 20px;
-    padding: 12px 20px;
+    width: 100%;               /* CENTRATO PERFETTO */
+    padding: 12px 0;
     font-size: 18px;
     border: none;
     border-radius: 8px;
@@ -95,20 +96,10 @@ body {
     color: var(--theme-btn-text);
 
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .theme-toggle:hover {
     background-color: var(--btn-bg-hover);
     color: white;
-}
-
-/* Icona */
-.theme-icon {
-    font-size: 20px;
 }
