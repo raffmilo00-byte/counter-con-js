@@ -1,20 +1,30 @@
+/* -----------------------------
+   Counter App – Tema Light/Dark
+------------------------------*/
+
+/* Variabili tema chiaro */
 :root {
     --bg: #f5f5f5;
     --card-bg: #ffffff;
     --text: #333;
     --btn-bg: #007bff;
     --btn-bg-hover: #0056b3;
+    --theme-btn-bg: #e0e0e0;
+    --theme-btn-text: #333;
 }
 
-/* Tema Dark */
+/* Variabili tema scuro */
 .dark {
     --bg: #1e1e1e;
     --card-bg: #2c2c2c;
     --text: #f0f0f0;
     --btn-bg: #444;
     --btn-bg-hover: #666;
+    --theme-btn-bg: #3a3a3a;
+    --theme-btn-text: #f0f0f0;
 }
 
+/* Corpo pagina */
 body {
     margin: 0;
     padding: 0;
@@ -27,6 +37,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Contenitore principale */
 .counter-container {
     background-color: var(--card-bg);
     padding: 40px;
@@ -37,7 +48,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.counter-container p {
+/* Display del numero */
+.counter-display {
     font-size: 48px;
     font-weight: bold;
     margin: 0 0 20px 0;
@@ -45,6 +57,7 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Pulsanti + e - */
 .counter-container button {
     width: 80px;
     height: 50px;
@@ -67,18 +80,30 @@ body {
     transform: scale(0.95);
 }
 
+/* Pulsante tema con icona */
 .theme-toggle {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 20px;
+    font-size: 18px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: var(--btn-bg);
-    color: white;
-    transition: 0.2s ease;
+    background-color: var(--theme-btn-bg);
+    color: var(--theme-btn-text);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .theme-toggle:hover {
     background-color: var(--btn-bg-hover);
+    color: white;
+}
+
+/* Icona del pulsante */
+.theme-icon {
+    font-size: 20px;
 }
