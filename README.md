@@ -9,9 +9,15 @@
 ![Netlify](https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white)
 
+---
+
 ## 🖼️ Preview
 
-![Preview](./image.png)
+<p align="center">
+  <img src="./image.png" alt="Counter App Preview" width="350">
+</p>
+
+---
 
 ## 🚀 Live Demo
 
