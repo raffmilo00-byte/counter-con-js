@@ -1,3 +1,7 @@
+// -----------------------------
+// Counter App – JS Pulito
+// -----------------------------
+
 // Valore iniziale del counter
 let counter = 0;
 
@@ -7,6 +11,7 @@ container.classList.add("counter-container");
 
 const display = document.createElement("p");
 display.classList.add("counter-display");
+display.textContent = counter;
 
 const btnPlus = document.createElement("button");
 btnPlus.textContent = "+";
@@ -25,7 +30,7 @@ function increment() {
 }
 
 function decrement() {
-    if (counter > 0) counter -= 1;   // esempio di logica unica
+    if (counter > 0) counter -= 1;
     updateDisplay();
 }
 
@@ -47,6 +52,7 @@ document.body.appendChild(container);
 
 // Display iniziale
 updateDisplay();
+
 // -----------------------------
 // TEMA DARK/LIGHT
 // -----------------------------
