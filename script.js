@@ -52,32 +52,15 @@ container.appendChild(btnMinus);
 document.body.appendChild(container);
 
 // -----------------------------
-// TEMA DARK/LIGHT con icona
+// TEMA DARK/LIGHT SENZA ICONA
 // -----------------------------
 
 const themeBtn = document.createElement("button");
 themeBtn.classList.add("theme-toggle");
+themeBtn.textContent = "Tema";
 
-// icona
-const themeIcon = document.createElement("span");
-themeIcon.classList.add("theme-icon");
-themeIcon.textContent = "🌙"; // icona iniziale
-
-// testo
-const themeText = document.createElement("span");
-themeText.textContent = "Tema";
-
-themeBtn.appendChild(themeIcon);
-themeBtn.appendChild(themeText);
 container.appendChild(themeBtn);
 
 themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
-
-    // cambia icona
-    if (document.body.classList.contains("dark")) {
-        themeIcon.textContent = "☀️";
-    } else {
-        themeIcon.textContent = "🌙";
-    }
 });
