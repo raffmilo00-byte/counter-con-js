@@ -1,3 +1,7 @@
+/* -----------------------------
+   Counter App – Stile pulito
+------------------------------*/
+
 body {
     margin: 0;
     padding: 0;
@@ -9,30 +13,45 @@ body {
     height: 100vh;
 }
 
+/* Contenitore principale */
 .counter-container {
-    background-color: white;
-    padding: 20px 30px;
+    background-color: #ffffff;
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     text-align: center;
+    width: 260px;
 }
 
-.counter-display {
+/* Display del numero */
+.counter-container p {
     font-size: 48px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    color: #333;
 }
 
-button {
+/* Pulsanti */
+.counter-container button {
+    width: 80px;
+    height: 50px;
+    margin: 10px;
     font-size: 24px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
     background-color: #007bff;
     color: white;
+    transition: 0.2s ease;
 }
 
-button:hover {
+/* Hover */
+.counter-container button:hover {
     background-color: #0056b3;
+}
+
+/* Effetto click */
+.counter-container button:active {
+    transform: scale(0.95);
 }
