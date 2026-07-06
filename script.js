@@ -2,35 +2,36 @@
 // Counter App – JS Pulito
 // -----------------------------
 
-// Valore iniziale del counter
 let counter = 0;
 
-// Creazione degli elementi
+// Contenitore
 const container = document.createElement("div");
 container.classList.add("counter-container");
 
+// Display
 const display = document.createElement("p");
 display.classList.add("counter-display");
 display.textContent = counter;
 
+// Pulsanti + e -
 const btnPlus = document.createElement("button");
 btnPlus.textContent = "+";
 
 const btnMinus = document.createElement("button");
 btnMinus.textContent = "-";
 
-// Funzioni DRY
+// Funzioni
 function updateDisplay() {
     display.textContent = counter;
 }
 
 function increment() {
-    counter += 1;
+    counter++;
     updateDisplay();
 }
 
 function decrement() {
-    if (counter > 0) counter -= 1;
+    if (counter > 0) counter--;
     updateDisplay();
 }
 
@@ -49,9 +50,6 @@ container.appendChild(display);
 container.appendChild(btnPlus);
 container.appendChild(btnMinus);
 document.body.appendChild(container);
-
-// Display iniziale
-updateDisplay();
 
 // -----------------------------
 // TEMA DARK/LIGHT con icona
