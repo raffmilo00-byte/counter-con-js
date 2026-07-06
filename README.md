@@ -8,8 +8,11 @@
 
 ![Netlify](https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white)
+
+## 🖼️ Preview
+
 ![Preview](./image.png)
+
 ## 🚀 Live Demo
 
 [![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Online-brightgreen)](https://raffmilo00-byte.github.io/counter-con-js/)
-
