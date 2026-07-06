@@ -47,3 +47,15 @@ document.body.appendChild(container);
 
 // Display iniziale
 updateDisplay();
+// -----------------------------
+// TEMA DARK/LIGHT
+// -----------------------------
+
+const themeBtn = document.createElement("button");
+themeBtn.textContent = "Tema Dark/Light";
+themeBtn.classList.add("theme-toggle");
+container.appendChild(themeBtn);
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
