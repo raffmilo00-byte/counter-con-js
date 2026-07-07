@@ -1,76 +1,76 @@
-const STORAGE_KEY = 'counterValue';
-let counterValue = Number(localStorage.getItem(STORAGE_KEY)) || 0;
-
-function createCounterUI() {
-  const container = document.createElement('section');
-  container.className = 'counter-container';
-
-  const display = document.createElement('div');
-  display.className = 'counter-display';
-  display.setAttribute('role', 'status');
-  display.setAttribute('aria-live', 'polite');
-  display.id = 'counterDisplay';
-
-  const controls = document.createElement('div');
-  controls.className = 'counter-controls';
-
-  const btnMinus = document.createElement('button');
-  btnMinus.className = 'btn btn-minus';
-  btnMinus.type = 'button';
-  btnMinus.setAttribute('aria-label', 'Decrementa');
-  btnMinus.textContent = '−';
-
-  const btnPlus = document.createElement('button');
-  btnPlus.className = 'btn btn-plus';
-  btnPlus.type = 'button';
-  btnPlus.setAttribute('aria-label', 'Incrementa');
-  btnPlus.textContent = '+';
-
-  const themeToggle = document.createElement('button');
-  themeToggle.className = 'btn btn-theme';
-  themeToggle.type = 'button';
-  themeToggle.setAttribute('aria-label', 'Cambia tema');
-  themeToggle.textContent = 'Cambia tema';
-
-  controls.appendChild(btnMinus);
-  controls.appendChild(btnPlus);
-
-  container.appendChild(display);
-  container.appendChild(controls);
-  container.appendChild(themeToggle);
-
-  return { container, display, btnPlus, btnMinus, themeToggle };
+:root{
+  --bg: #f5f7fb;
+  --card: rgba(255,255,255,0.9);
+  --text: #111;
+  --accent: #0b84ff;
+  --btn-text: #ffffff;
 }
 
-function updateDisplay(display, value) {
-  display.textContent = value;
-  localStorage.setItem(STORAGE_KEY, String(value));
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#e6eefc,#f7f7fb);
+  color:var(--text);
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
 }
 
-function setupCounterLogic(ui) {
-  const { display, btnPlus, btnMinus, themeToggle } = ui;
-
-  btnPlus.addEventListener('click', () => {
-    counterValue += 1;
-    updateDisplay(display, counterValue);
-  });
-
-  btnMinus.addEventListener('click', () => {
-    counterValue -= 1;
-    updateDisplay(display, counterValue);
-  });
-
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-  });
+body.dark{
+  --bg:#0f1724;
+  --card: rgba(20,20,30,0.85);
+  --text:#ffffff;
+  background: linear-gradient(135deg,#071029,#0b1220);
 }
 
-function init() {
-  const app = document.getElementById('app');
-  const ui = createCounterUI();
-  app.appendChild(ui.container);
-  updateDisplay(ui.display, counterValue);
-  setupCounterLogic(ui);
+.counter-container{
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.12);
+  text-align:center;
+  min-width:260px;
+  max-width:360px;
+  width:100%;
 }
 
-document.addEventListener('DOMContentLoaded', init);
+.counter-display{
+  font-size:48px;
+  font-weight:600;
+  margin-bottom:16px;
+  color:var(--text);
+}
+
+.counter-controls{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.btn{
+  padding:10px 18px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  background:var(--accent);
+  color:var(--btn-text);
+  font-weight:600;
+  font-size:18px;
+  transition:transform .12s ease, box-shadow .12s ease;
+  box-shadow:0 6px 18px rgba(11,132,255,0.18);
+}
+
+.btn:active{
+  transform:translateY(1px) scale(.995);
+}
+
+.btn-theme{
+  margin-top:8px;
+  background:transparent;
+  color:var(--text);
+  border:1px solid rgba(0,0,0,0.08);
+  padding:8px 12px;
+}
