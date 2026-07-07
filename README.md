@@ -14,7 +14,7 @@
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="./image.png" alt="Counter App Preview" width="350">
+  <img src=".img/image.png" alt="Counter App Preview" width="350">
 </p>
 
 
