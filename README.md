@@ -96,7 +96,10 @@ L’app è pubblicata tramite GitHub Pages ed è pensata come esercizio pratico 
 
 2 Apri index.html nel browser
 
-Oppure visita la demo online tramite GitHub Pages
+Oppure 
+**Prova l’applicazione qui:**  
+https://raffmilo00-byte.github.io/counter-con-js/
+
 
 ♿ Accessibilità
 Il progetto include:
