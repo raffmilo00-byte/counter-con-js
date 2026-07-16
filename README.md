@@ -126,6 +126,6 @@ CSS pulito e coerente
 Variabili inutilizzate rimosse
 
 👤 Autore
-Raff  
+Raffaele Milo
 Progetto realizzato come esercizio di JavaScript, DOM e UI design.
 
