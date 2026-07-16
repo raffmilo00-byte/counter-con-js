@@ -91,7 +91,8 @@ L’app è pubblicata tramite GitHub Pages ed è pensata come esercizio pratico 
 
 1. Clona il repository:
    ```bash
-   git clone (https://img.shields.io/badge/GitHub%20Pages-Online-brightgreen)](https://raffmilo00-byte.github.io/counter-con-js/)
+ git clone https://github.com/raffmilo00-byte/counter-con-js.git
+
 
 2 Apri index.html nel browser
 
