@@ -47,19 +47,34 @@ function updateDisplay(display, value) {
   localStorage.setItem(STORAGE_KEY, String(value));
 }
 
+function changeBy(delta, display) {
+  counterValue += delta;
+  updateDisplay(display, counterValue);
+}
+
 function setupCounterLogic(ui) {
   const { display, btnPlus, btnMinus, themeToggle } = ui;
 
+  // Click
   btnPlus.addEventListener('click', () => {
-    counterValue += 1;
-    updateDisplay(display, counterValue);
+    changeBy(1, display);
   });
 
   btnMinus.addEventListener('click', () => {
-    counterValue -= 1;
-    updateDisplay(display, counterValue);
+    changeBy(-1, display);
   });
 
+  // Tastiera (accessibilità)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowUp') {
+      changeBy(1, display);
+    }
+    if (e.key === 'ArrowDown') {
+      changeBy(-1, display);
+    }
+  });
+
+  // Tema
   themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
   });
